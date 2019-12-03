@@ -42,9 +42,9 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
+            // Usage of TokenGuard 
+            'driver' => 'passport',
+            'provider' => 'users'
         ],
     ],
 
