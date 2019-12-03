@@ -42,7 +42,7 @@ return [
         ],
 
         'api' => [
-            // Usage of TokenGuard 
+            // Usage of TokenGuard
             'driver' => 'passport',
             'provider' => 'users'
         ],
