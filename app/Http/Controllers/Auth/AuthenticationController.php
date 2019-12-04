@@ -23,9 +23,8 @@ class AuthenticationController extends Controller
      */
     public function loginUser(AuthenticationLoginRequest $request)
     {
-        $email = $request->get('email');
-        $password = $request->get('password');
-        $credentials = [$email, $password];
+        // Get credentials from the request
+        $credentials = request(['email', 'password']);
         // Attempt auth
         if (!Auth::attempt($credentials)) {
             return response()->json(['message' => 'Not authorized!'], 401);
